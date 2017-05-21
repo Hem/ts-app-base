@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "preinstall": "rm-local-modules",
     "test-doc": " tsc && mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts' ",
     "test": "tsc && mocha -r ts-node/register test/**/*.ts",
     "start": "tsc && node dist/index.js"
@@ -44,6 +45,7 @@
     "knex": "^0.13.0",
     "morgan": "^1.8.1",
     "reflect-metadata": "^0.1.10",
+    "rm-local-modules": "0.0.2",
     "sqlite3": "^3.1.8"
   }
 }

@@ -1,6 +1,6 @@
 import { Container } from "inversify";
 import { IGroupRepository, IUserRepository } from "app-data-contracts";
-import { GroupRepository, UserRepository } from './repository';
+import { GroupRepository, UserRepository } from './';
 
 
 

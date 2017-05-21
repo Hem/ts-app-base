@@ -1,7 +1,6 @@
-import { DbConfig } from 'app-data-contracts';
-
 import { inject, injectable } from 'inversify';
 import * as Knex from 'knex';
+import { DbConfig } from "./";
 
 
 let _db:Knex;

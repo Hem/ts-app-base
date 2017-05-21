@@ -1,8 +1,9 @@
 import 'reflect-metadata';
-import { UserRepository } from '../src';
-import { DbConfig, IUserRepository } from 'app-data-contracts';
+
+import { IUserRepository } from 'app-data-contracts';
 import { suite, test, slow, timeout, skip, only } from "mocha-typescript";
 import { expect } from 'chai';
+import { DbConfig, UserRepository } from "../src";
 
 const DEFAULT_DB_CONFIG = require('./db/config.json');
 
@@ -12,9 +13,10 @@ const DEFAULT_DB_CONFIG = require('./db/config.json');
 
     repository:UserRepository;
 
-    before() { 
+    constructor() { 
+        const dbConfig = new DbConfig( DEFAULT_DB_CONFIG );
         this.repository = new UserRepository();
-        this.repository.dbConfig = new DbConfig( DEFAULT_DB_CONFIG );
+        this.repository.dbConfig = dbConfig;
     }
 
     after() { }

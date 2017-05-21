@@ -5,7 +5,6 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "t1": " tsc && mocha -r ts-node/register test/temp.ts ",
     "test": "tsc && mocha -r ts-node/register test/**/*.ts"
   },
   "keywords": [],
@@ -16,7 +15,8 @@
     "inversify": "^4.1.0",
     "knex": "^0.13.0",
     "reflect-metadata": "^0.1.10",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "typescript": "^2.3.2"
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
@@ -25,10 +25,9 @@
     "@types/mocha": "^2.2.41",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^3.1.6",
-    "mocha": "^3.4.1",
-    "mocha-typescript": "^1.1.4",
+    "mocha": "3.4.1",
+    "mocha-typescript": "1.1.4",
     "ts-node": "^3.0.4",
-    "typescript": "^2.3.2"
+    "rm-local-modules": "0.0.2"
   }
 }
